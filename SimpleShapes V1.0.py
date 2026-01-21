@@ -6,13 +6,37 @@
 #the commit and push issue, so I will update it to master and delete main like I did in the
 #previous repository.
 
-import Turtle
+#import section
+import turtle
 import time
 
-def TriangleSide ():
+#Don't forget to add this line to create the 'turtle' from the import def
+my_turtle = turtle.Turtle()
+
+#defines the counter i
+i = 0
+
+#Function Section
+def triangleSide ():
+    my_turtle.forward(100)
+    my_turtle.right(60)
+    #Last angle: 45 degrees
+
+def hexagonSide ():
+    my_turtle.forward(100)
+    my_turtle.right(30)
+    #Last angle: 30 degrees
+
+def octogonSide ():
     my_turtle.forward(100)
     my_turtle.right(45)
+    #Last angle: 20 degrees
 
-def SquareSide ():
-    my_turtle.forward(100)
-    my_turtle.right(90)
+def triangleDraw ():
+    while i < 3:
+        triangleSide()
+        i+1
+
+
+#here is where we will call our functions in the order that we need them
+triangleDraw()
