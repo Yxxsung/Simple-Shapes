@@ -24,11 +24,11 @@ def triangleside ():
 
 def hexagonside ():
     my_turtle.forward(100)
-    my_turtle.right(30)
+    my_turtle.right(60)
     #Last angle: 30 degrees
 
 def octagonside ():
-    my_turtle.forward(100)
+    my_turtle.forward(75)
     my_turtle.right(45)
     #Last angle: 20 degrees
 
@@ -41,8 +41,18 @@ def triangledraw ():
         i = i+1
 
 
-#def hexagondraw ():
+def hexagondraw ():
+    i = 0
+    while i <= 5:
+        hexagonside()
+        i = i+1
 
+
+def octagondraw ():
+    i = 0
+    while i <=7:
+        octagonside()
+        i = i+1
 
 #here is where we will call our functions in the order that we need them
 triangledraw()
@@ -56,4 +66,18 @@ my_turtle.left(90)
 
 my_turtle.forward(200)
 
+my_turtle.pendown()
 
+hexagondraw()
+
+time.sleep(2)
+
+my_turtle.penup()
+
+my_turtle.left(90)
+
+my_turtle.forward(200)
+
+my_turtle.pendown()
+
+octagondraw()
