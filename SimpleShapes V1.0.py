@@ -14,29 +14,46 @@ import time
 my_turtle = turtle.Turtle()
 
 #defines the counter i
-i = 0
+i= 0
 
 #Function Section
-def triangleSide ():
-    my_turtle.forward(100)
-    my_turtle.right(60)
-    #Last angle: 45 degrees
+def triangleside ():
+    my_turtle.forward(150)
+    my_turtle.right(120)
+    #Last angle: 120 degrees
 
-def hexagonSide ():
+def hexagonside ():
     my_turtle.forward(100)
     my_turtle.right(30)
     #Last angle: 30 degrees
 
-def octogonSide ():
+def octagonside ():
     my_turtle.forward(100)
     my_turtle.right(45)
     #Last angle: 20 degrees
 
-def triangleDraw ():
-    while i < 3:
-        triangleSide()
-        i+1
+#This specific function will draw the triangle using the triangleSide fucntion
+def triangledraw ():
+    #for some reason it wants the conter defined INSIDE the function *eyeroll*
+    i = 0
+    while i <= 2:
+        triangleside()
+        i = i+1
+
+
+#def hexagondraw ():
 
 
 #here is where we will call our functions in the order that we need them
-triangleDraw()
+triangledraw()
+
+#creates a pause to help the viewer follow the 'turtle'
+time.sleep(2)
+
+my_turtle.penup()
+
+my_turtle.left(90)
+
+my_turtle.forward(200)
+
+
